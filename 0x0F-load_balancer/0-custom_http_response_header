@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
-# This script configures nginx so that its http response
+# This script configures Nginx to include the custom header "X-Served-By" in its HTTP responses.
+# The header value will be the hostname of the server that served the request.
 
+# Install Nginx
 sudo apt-get update
 sudo apt-get install -y nginx
 
+# Edit the Nginx configuration
 custom_header="add_header X-Served-By \$hostname;"
 nginx_conf="/etc/nginx/sites-available/default"
 sudo sed -i "/server_name _;/a $custom_header" $nginx_conf
 
+# Restart Nginx
 sudo service nginx restart
+
+# Done! Your Bash script now configures an Ubuntu machine as required.
