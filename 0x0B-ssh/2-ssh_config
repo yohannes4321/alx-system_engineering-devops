@@ -3,5 +3,5 @@
 host myserver
     Hostname 100.25.138.232
     User ubuntu
-    IdentityFile ~/.ssh/id_rsa
-    PasswordAuthentication nogit 
+    IdentityFile -i ~/.ssh/id_rsa
+    PasswordAuthentication no
