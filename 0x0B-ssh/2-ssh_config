@@ -1,0 +1,3 @@
+#!/usr/bin env bash
+# connect to the server with out using the password
+ssh-copy-id  -i ~/.ssh/school.pub ubuntu@100.25.138.232
