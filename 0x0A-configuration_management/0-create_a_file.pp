@@ -1,7 +1,8 @@
-# creates a file in /tmp
+# This Puppet manifest creates a file at /tmp/school with specific permissions, owner, group, and content
 
 file { '/tmp/school':
-  content =>'I love Puppet',
+  ensure  => 'file',
+  content => 'I love Puppet',
   mode    => '0744',
   owner   => 'www-data',
   group   => 'www-data',
