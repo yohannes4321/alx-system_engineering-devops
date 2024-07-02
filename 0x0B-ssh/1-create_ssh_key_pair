@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# we are using binary 4096 using -b commaned
+# create parapharse using the -p commaned
+ssh-keygen -t rsa -b 4096 -P betty -f school
