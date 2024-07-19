@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#i am gona create a ssh loginand use parraphrase and 4096 number of bits
+ssh-keygen -t rsa   -b 4096 -P betty -f school
