@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# i am gona transfer file to the server using scp and in ssh
+if[$# -lt 4]
+then 
+	echo"Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+	exit 1
+#assiging paremeters to variables
+path_to_file =$1
+ip=$2
+user_name=$3
+path_to_ssh_private_key=$4
+
+# disabling strict hostkey cheaking
+scp -o "StrictHostKeyChecking=no" -i "$path_to_ssh_private_key" "$path_to_file" "$user_name@ip:~/"
+# check if the file transfered is successfull
+
+if [$? -eq 0]
+	echo "file transfered is successfull"
+else
+	echo"file transfered Failed"
+fi 
