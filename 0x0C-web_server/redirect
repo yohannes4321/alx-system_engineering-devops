@@ -1,0 +1,3 @@
+String_for_replacement="server_name _;\n\t rewrite ^\\/github.com\\/ /yohannes4321 permanent;"
+sudo sed -i "s/server_name _/$String_for_replacement/" /etc/nginx/sites-enabled/default
+

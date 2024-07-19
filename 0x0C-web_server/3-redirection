@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Redirect permanently and install nginx 
+
+# Install nginx
+sudo apt-get update
+sudo apt-get install nginx -y
+
+# Define the replacement string
+string_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/yohannes4321 permanent;"
+
+# Update nginx configuration
+sudo sed -i "s/server_name _;/$string_replacement/" /etc/nginx/sites-enabled/default
+
+# Restart nginx service
+sudo service nginx restart
