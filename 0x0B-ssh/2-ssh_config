@@ -1,7 +1,0 @@
-#!/usr/bin env bash
-# connect to the server with out using the password
-host myserver
-    Hostname 100.25.138.232
-    User ubuntu
-    IdentityFile -i ~/.ssh/id_rsa
-    PasswordAuthentication no

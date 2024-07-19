@@ -1,1 +1,1 @@
-ssh
+connect ssh
