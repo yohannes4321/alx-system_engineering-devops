@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#dowloading nginx and change the server face to welcome nginx to Helloworld
+sudo apt-get  install nginx -y
+sudo ufw 'Ngenx HTTP'
+
+echo "Hello World!" | sudo tee  /var/www/html/index.html
+sudo nginx -t
+sudo service nginx restart
+sudo service nginx reload 
