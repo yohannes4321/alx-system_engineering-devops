@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# add header to nginx which host is responsible for this task
+
+sudo sed -i "server_name _"a add_header X-Served-By $HOSTNAME ;" etc/nginx/sites-enabled/default
+
+# cheak nginx works fine
+sudo nginx -t
+# sudo service nginx restart

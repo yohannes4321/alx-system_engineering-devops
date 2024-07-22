@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# creating ssh login
+#setting up ssh agent
+
+eval $("ssh-agent")
+
+# add ssh idetfile file in computer memory
+
+ssh-add ~/.ssh/school
+# connect useing username and ip address
+ssh ubuntu@100.25.197.213
