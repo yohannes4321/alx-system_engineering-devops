@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# connect to web_01
+
+eval $("ssh-agent")
+ssh-add ~/ssh/school
+scp ubuntu@54.85.109.210:/etc/mysql/mysql.conf.d/mysqld.cnf 4-mysql_configuration_primary
+scp ubuntu@35.168.8.91:/etc/mysql/mysql.conf.d/mysqld.cnf 4-mysql_configuration_replica
+
